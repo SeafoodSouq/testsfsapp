@@ -19,27 +19,28 @@ ${BROWSER}   chrome
 
 Navigate to Page
     Log To Console  Navigating to Seafood Souq
-    SSouqSmoke.Navigate to Page
+    SSouqSmoke.Navigate to Page   https://dev.seafoodsouq.com
+
 
 Existing User Signin
     Log To Console  Log in
-    SSouqSmoke.Navigate to Page
+    SSouqSmoke.Navigate to Page  https://dev.seafoodsouq.com
     SSouqSmoke.Existing User Login
     SSouqSmoke.Shop
 
 Buyer Registration
     Log To Console  Buy
-    SSouqSmoke.Navigate to Page
+    SSouqSmoke.Navigate to Page   https://qa.seafoodsouq.com
     SSouqSmoke.Buyer Registration
 
 Seller Registration
     Log To Console  Sell
-    SSouqSmoke.Navigate to Page
+    SSouqSmoke.Navigate to Page   https://qa.seafoodsouq.com
     SSouqSmoke.Seller Registration
 
 
 Add Product
     Log To Console  Add Product
-    SSouqSmoke.Navigate to Page
+    SSouqSmoke.Navigate to Page  https://qa.seafoodsouq.com
     SSouqSmoke.Existing User Login
     SSouqSmoke.Add Product

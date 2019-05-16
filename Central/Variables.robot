@@ -10,7 +10,7 @@ ${Login}  //div[@class='carousel-nav-sfs']//a[@class='nav-link'][contains(text()
 ${SSouqDevUrl}  https://dev.seafoodsouq.com/
 ${SSouqStagingUrl}  https://staging.seafoodsouq.com/
 ${SSouqProdUrl}  https://seafoodsouq.com/
-${WelcomeBack}  //span[contains(.,'WELCOME BACK')]
+${WelcomeBack}  //span[contains(.,'Welcome')]
 ${LoginBtn}  //button[@class='btn-blue'][contains(.,'LOGIN & SWIM')]
 ${EmailField}  //input[contains(@formcontrolname,'email')]
 ${PasswordField}  //input[contains(@formcontrolname,'password')]
@@ -58,15 +58,15 @@ ${BuyerPW}   //input[@placeholder='Password']
 ${BuyerPWConfirm}  //input[@placeholder='Repeat Password']
 ${BuyerCoName}   //input[@placeholder='Company Name']
 ${BuyerBusinessType}   //input[@placeholder='Type of Business']
-${BuyerEmirateDropDown}  //select[@formcontrolname='City']
+${BuyerEmirateDropDown}  //span[@title='Select an Emirate...']
 ${DropDownSelection}  //option[contains(text(),'Dubai')]
 ${BuyerAddress}  //input[@placeholder='Address']
 ${BuyerTRN}  //input[@type='number']
 ${TermsConditions}  //input[@type='checkbox']
 ${RegisterToBuy}  //button[contains(.,'register to buy')]
 ${RegistrationConfirmPageHeader}  //h1[contains(.,'Your registration information has been sent to the administrators of Seafood Souq for review.  Please keep an eye out for our email regarding your registration status')]
-${ClickToGoBack}  //h2[contains(.,'Click here to go back to home')]
-${HeadShotLogo}   //div[contains(@class,'headshot-logo')]
+${ClickToGoBack}  //h2[contains(.,'Or to go back home')]
+${HeadShotLogo}   //div[contains(@class,'headshot-logo original-logo')]
 
 
 ${RegisterToSellBtn}  //a[contains(.,'Register to Sell')]
@@ -80,9 +80,9 @@ ${SellerPWConfirm}  //input[@placeholder='Repeat Password']
 ${SellerCoName}   //input[@placeholder='Company Name']
 ${ContactNumber}  //input[@placeholder='Contact Number']
 ${TradeBrandName}  //input[@placeholder='Trade / Brand Name']
-${CompanyTypeDrop}  //select[@formcontrolname='companyType']
+${CompanyTypeDrop}  //span[@title='Select an option...']
 ${CompanyTypeSelection}  //option[contains(text(),'Producer')]
-${CountryDropDown}  //select[@formcontrolname='location']
+${CountryDropDown}  //span[@title='Country']
 ${CountrySelect}  //body//option[232]
 ${SellerCity}  //input[@placeholder='City']
 ${SellerAddress}  //input[@placeholder='Address']
@@ -139,7 +139,7 @@ ${TrackOrderPageConfirm}  //a[@aria-controls='pending']
 #Seller
 ${MyProductsMenuItem}  //a[contains(.,'My Products')]
 ${AddNewButton}  //div[@class='add-new-box']//div
-${AddNewProductHeader}  //span[contains(.,'Add new product')]
+${AddNewProductHeader}  //span[contains(.,'Add product')]
 ${ProductNameField}  //input[@placeholder='Product Name...*']
 ${BrandNameField}  //input[contains(@placeholder,'Brand Name')]
 ${CountryOriginDrop}  //select[@id='country']
@@ -176,14 +176,15 @@ ${TreatmentSelection}  //option[contains(text(),'Fresh')]
 ${AdvancedPriceCheckbox}  //label[contains(.,'6-7 KG')]
 ${GoBackButton}  //button[@class='btn btn-save'][contains(.,'Go back')]
 ${SubmitButton}  //button[contains(.,'submit product')]
-${CompanyInfoHeader}  //span[contains(.,'company info')]
+${CompanyInfoHeader}  //span[contains(.,'Product Details')]
 ${ProductFeatureHeader}   //span[contains(.,'PRODUCT FEATURES')]
-${AdvancedPriceHeader}  //span[contains(.,'ADVANCED PRICING')]
+${AdvancedPriceHeader}  //span[contains(.,'PRICING')]
 ${UploadImageScrollTo}  //label[@for='file'][contains(.,'Upload Gallery Images...*')]
 ${AddNewProductHeader}  //span[contains(.,'Add new product')]
 ${UploadProductImage}   //input[@id='file']
 ${ImageOne}   /Users/ronharley/AutomatedTests/SSouq/UploadImages/SFSLogo.png
 ${ImageOneUpload}   //div[@class='col-3 img-select']//img
+${PriceField}  //input[@ng-reflect-name='0']
 
 
 

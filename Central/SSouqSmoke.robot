@@ -141,6 +141,7 @@ Buyer Registration
     Input Password  ${BuyerPWConfirm}  ${buyerpwverifyentry}
     Input Text  ${BuyerCoName}  ${buyerconameentry}
     Input Text  ${BuyerBusinessType}  ${buyerbustype}
+    Scroll Element Into View  ${RegisterToBuy}
     Click Element  ${BuyerEmirateDropDown}
     Click Element  ${DropDownSelection}
     Input Text  ${BuyerAddress}  ${buyeraddressentry}
@@ -253,9 +254,9 @@ Add Product
     Sleep  1
     Click Element  ${SeaLifeSubSpeciesVarSelection}
     Scroll Element Into View  ${UploadImageScrollTo}
-#    Click Element   ${CoProdSKUField}
+    Click Element   ${CoProdSKUField}
 #    Input Text      ${CoProdSKUField}   ${pa_sku}
-    Input Text      ${CoHsCodeField}  ${pa_hscode}
+#    Input Text      ${CoHsCodeField}  ${pa_hscode}
     Click Element      ${CoHsCodeLookup}
     Input Text      ${MinOrderField}  ${pa_min_o}
     Input Text      ${MaxOrderField}  ${pa_max_o}
@@ -268,7 +269,6 @@ Add Product
     Capture Page Screenshot
     Wait Until Element Is Visible  ${ImageOneUpload}
     Capture Page Screenshot
-    Input Text      ${SpoilField}    ${pa_spoil}
     Scroll Element Into View  ${AdvancedPriceHeader}
     Click Element   ${RaisedDrop}
     Click Element   ${RaisedSelection}
@@ -276,8 +276,12 @@ Add Product
     Click Element   ${TreatmentSelection}
     Scroll Element Into View  ${CompanyCatFooter}
     Click Element   ${AdvancedPriceCheckbox}
+    Scroll Element Into View   ${SubmitButton}
+    Input Text   ${PriceField}  65
+    Sleep  2
     Click Element   ${SubmitButton}
     Scroll Element Into View   ${ProductFeatureHeader}
+    Sleep  8
     Capture Page Screenshot
 
 
