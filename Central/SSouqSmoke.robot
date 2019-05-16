@@ -222,7 +222,9 @@ Add Product
     Wait Until Element is Visible  ${AddNewProductHeader}
     Input Text  ${ProductNameField}  ${pa_name}
     Input Text  ${BrandNameField}  ${pa_brand}
+    Sleep  2
     Click Element  ${CountryOriginDrop}
+    Sleep  2
     Capture Page Screenshot
     Click Element  ${CountryOriginSelection}
     Click Element  ${ProcessingCountryDrop}
@@ -231,26 +233,52 @@ Add Product
     Click Element  ${PortLoadingSelection}
     Click Element  ${UnitOfSaleDrop}
     Click Element  ${UnitOfSaleSelectionKg}
+    Scroll Element Into View  ${CompanyInfoHeader}
+    #Sleep  1
+    Click Element  ${SeaLifeCatDrop}
     Click Element  ${SeaLifeCatSelection}
+    Sleep  1
+    Click Element  ${SeaLifeCatDrop}
+    Click Element  ${SeaLifeCatSelection}
+    Sleep  1
     Click Element  ${SeaLifeSpeciesDrop}
+    Sleep  1
     Click Element  ${SeaLifeSpeciesSelection}
+    Sleep  1
     Click Element  ${SeaLifeSubSpeciesDrop}
+    Sleep  1
     Click Element  ${SeaLifeSubSpeciesSelection}
+    Sleep  1
     Click Element  ${SeaLifeSubSpeciesVarDrop}
+    Sleep  1
     Click Element  ${SeaLifeSubSpeciesVarSelection}
-    Input Text      ${CoProdSKUField}  ${pa_sku}
+    Scroll Element Into View  ${UploadImageScrollTo}
+#    Click Element   ${CoProdSKUField}
+#    Input Text      ${CoProdSKUField}   ${pa_sku}
     Input Text      ${CoHsCodeField}  ${pa_hscode}
     Click Element      ${CoHsCodeLookup}
     Input Text      ${MinOrderField}  ${pa_min_o}
     Input Text      ${MaxOrderField}  ${pa_max_o}
-    Input Text      ${SpoilField}  ${pa_spoil}
+    Scroll Element Into View   ${ProductFeatureHeader}
+    Click Element  ${UploadImage}
+    Capture Page Screenshot
+    Sleep  4
+    Choose File     ${UploadProductImage}   ${ImageOne}
+    Sleep  3
+    Capture Page Screenshot
+    Wait Until Element Is Visible  ${ImageOneUpload}
+    Capture Page Screenshot
+    Input Text      ${SpoilField}    ${pa_spoil}
+    Scroll Element Into View  ${AdvancedPriceHeader}
     Click Element   ${RaisedDrop}
     Click Element   ${RaisedSelection}
     Click Element   ${TreatmentDrop}
     Click Element   ${TreatmentSelection}
+    Scroll Element Into View  ${CompanyCatFooter}
     Click Element   ${AdvancedPriceCheckbox}
     Click Element   ${SubmitButton}
-
+    Scroll Element Into View   ${ProductFeatureHeader}
+    Capture Page Screenshot
 
 
 

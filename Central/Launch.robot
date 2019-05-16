@@ -19,8 +19,7 @@ ${BROWSER}   chrome
 
 Navigate to Page
     Log To Console  Navigating to Seafood Souq
-    SSouqSmoke.Navigate to Page   https://dev.seafoodsouq.com
-
+    SSouqSmoke.Navigate to Page
 
 Existing User Signin
     Log To Console  Log in
