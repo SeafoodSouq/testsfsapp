@@ -22,19 +22,19 @@ Resource   ${EXECDIR}/Central/Variables.robot
 Navigate_To_Page
     [Tags]  Go to Seafood Souq url
     [Documentation]
-    [Arguments]  ${SFSURL}
-    ${sfstesturl}=  Set Variable  ${SFSURL}
+#    [Arguments]  ${SFSURL}
+#    ${sfstesturl}=  Set Variable  ${SFSURL}
     Log To Console  Navigating to Seafood Souq
-    go to   ${sfstesturl}
+    go to   %{SFSURL}
     maximize browser window
 
 
 Existing User Login
     [Tags]  Log In Up
     [Documentation]
-    [Arguments]  ${EXISTINGU}  ${EXISTINGP}
-    ${existinguser}=  Set Variable  ${EXISTINGU}
-    ${existingpw}=  Set Variable  ${EXISTINGP}
+#    [Arguments]  ${EXISTINGU}  ${EXISTINGP}
+#    ${existinguser}=  Set Variable  ${EXISTINGU}
+#    ${existingpw}=  Set Variable  ${EXISTINGP}
     Log To Console  Log into Seafood Souq
     Set Window Size  1366   800
     Wait Until Element is Visible   ${Login}
@@ -49,17 +49,17 @@ Existing User Login
 Shop
     [Tags]  Shop
     [Documentation]
-    [Arguments]  ${PAYNAMEF}  ${PAYNAMEL}  ${PAYCONAME}  ${PAYADDY}  ${PAYCITY}  ${PAYCOUNTRY}  ${PAYCCNAME}  ${PAYCCNUM}  ${PAYCCCVN}  ${PAYADDNOTE}
-    ${paymentnamef}=  Set Variable    ${PAYNAMEF}
-    ${paymentnamel}=  Set Variable    ${PAYNAMEL}
-    ${paymentco}=  Set Variable    ${PAYCONAME}
-    ${paymentad}=  Set Variable    ${PAYADDY}
-    ${paymentcty}=  Set Variable    ${PAYCITY}
-    ${paymentctry}=  Set Variable   ${PAYCOUNTRY}
-    ${paymentccname}=  Set Variable  ${PAYCCNAME}
-    ${paymentccnumber}=  Set Variable  ${PAYCCNUM}
-    ${paymentcccvn}=  Set Variable   ${PAYCCCVN}
-    ${paymentaddnote}=  Set Variable  ${PAYADDNOTE}
+#    [Arguments]  ${PAYNAMEF}  ${PAYNAMEL}  ${PAYCONAME}  ${PAYADDY}  ${PAYCITY}  ${PAYCOUNTRY}  ${PAYCCNAME}  ${PAYCCNUM}  ${PAYCCCVN}  ${PAYADDNOTE}
+#    ${paymentnamef}=  Set Variable    ${PAYNAMEF}
+#    ${paymentnamel}=  Set Variable    ${PAYNAMEL}
+#    ${paymentco}=  Set Variable    ${PAYCONAME}
+#    ${paymentad}=  Set Variable    ${PAYADDY}
+#    ${paymentcty}=  Set Variable    ${PAYCITY}
+#    ${paymentctry}=  Set Variable   ${PAYCOUNTRY}
+#    ${paymentccname}=  Set Variable  ${PAYCCNAME}
+#    ${paymentccnumber}=  Set Variable  ${PAYCCNUM}
+#    ${paymentcccvn}=  Set Variable   ${PAYCCCVN}
+#    ${paymentaddnote}=  Set Variable  ${PAYADDNOTE}
     Log to Console  Shop workflow
     Sleep  5
     # Wait Until Element is not Visible  ${WaveLoader}
@@ -81,18 +81,18 @@ Shop
     Capture Page Screenshot
     Wait Until Element is Visible  ${ShippingAddressHeader}
     Scroll Element Into View  ${ProceedToPaymentBtn}
-    Input Text  ${PaymentFName}  ${paymentnamef}
-    Input Text  ${PaymentLName}  ${paymentnamel}
-    Input Text  ${PaymentCoName}  ${paymentco}
-    Input Text  ${PaymentAddress}  ${paymentad}
-    Input Text  ${PaymentCity}  ${paymentcty}
-    Input Text  ${PaymentCountry}   ${paymentctry}
+    Input Text  ${PaymentFName}  %{PAYNAMEF}
+    Input Text  ${PaymentLName}  %{PAYNAMEL}
+    Input Text  ${PaymentCoName}  %{PAYCONAME}
+    Input Text  ${PaymentAddress}  %{PAYADDY}
+    Input Text  ${PaymentCity}  %{PAYCITY}
+    Input Text  ${PaymentCountry}   %{PAYCOUNTRY}
     Capture Page Screenshot
     Click Element  ${ProceedToPaymentBtn}
     Wait Until Element is Visible   ${EnterPaymentHeader}
-    Input Text  ${PaymentCardHolderName}  ${paymentccname}
-    Input Text  ${PaymentCardNumber}  ${paymentccnumber}
-    Input Text  ${PaymentCardCVN}  ${paymentcccvn}
+    Input Text  ${PaymentCardHolderName}  %{PAYCCNAME}
+    Input Text  ${PaymentCardNumber}  %{PAYCCNUM}
+    Input Text  ${PaymentCardCVN}  %{PAYCCCVN}
     Click Element  ${PaymentMonth}
     Click Element  ${PaymentMonthSelection}
     Click Element  ${PaymentYear}
@@ -109,7 +109,7 @@ Shop
     Sleep  2
     Double Click Element   ${ConfirmOrderBtn}
     Capture Page Screenshot
-    Input Text  ${AdditionalNotesField}  ${paymentaddnote}
+    Input Text  ${AdditionalNotesField}  %{PAYADDNOTE}
     Click Element  ${CompleteCheckoutBtn}
     Wait Until Element is Visible  ${ThankYouForOrderHeader}
     Click Element  ${TrackOrderBtn}
@@ -121,33 +121,33 @@ Shop
 Buyer Registration
     [Tags]  Buyer Registration
     [Documentation]
-    [Arguments]  ${BUYFIRST}  ${BUYLAST}  ${BUYEMAIL}   ${BUYMOBILE}  ${BUYPW}  ${BUYPWVERIFY}   ${BUYCONAME}   ${BUYBUSTYPE}   ${BUYADDY}   ${BUYTRN}
-    ${buyerfirstn}=  Set Variable  ${BUYFIRST}
-    ${buyerlastn}=  Set Variable  ${BUYLAST}
-    ${buyeremailentry}=  Set Variable  ${BUYEMAIL}
-    ${buyerphoneentry}=  Set Variable  ${BUYMOBILE}
-    ${buyerpwentry}=   Set Variable   ${BUYPW}
-    ${buyerpwverifyentry}=   Set Variable   ${BUYPWVERIFY}
-    ${buyerconameentry}=   Set Variable   ${BUYCONAME}
-    ${buyerbustype}=    Set Variable   ${BUYBUSTYPE}
-    ${buyeraddressentry}=    Set Variable   ${BUYADDY}
-    ${buyertrnentry}=    Set Variable   ${BUYTRN}
+#    [Arguments]  ${BUYFIRST}  ${BUYLAST}  ${BUYEMAIL}   ${BUYMOBILE}  ${BUYPW}  ${BUYPWVERIFY}   ${BUYCONAME}   ${BUYBUSTYPE}   ${BUYADDY}   ${BUYTRN}
+#    ${buyerfirstn}=  Set Variable  ${BUYFIRST}
+#    ${buyerlastn}=  Set Variable  ${BUYLAST}
+#    ${buyeremailentry}=  Set Variable  ${BUYEMAIL}
+#    ${buyerphoneentry}=  Set Variable  ${BUYMOBILE}
+#    ${buyerpwentry}=   Set Variable   ${BUYPW}
+#    ${buyerpwverifyentry}=   Set Variable   ${BUYPWVERIFY}
+#    ${buyerconameentry}=   Set Variable   ${BUYCONAME}
+#    ${buyerbustype}=    Set Variable   ${BUYBUSTYPE}
+#    ${buyeraddressentry}=    Set Variable   ${BUYADDY}
+#    ${buyertrnentry}=    Set Variable   ${BUYTRN}
     Set Window Size  1366   800
     Click Element  ${RegisterHeaderBtn}
     Wait Until Element is Visible  ${BuyerRegHeader}
-    Input Text  ${BuyerFirstName}   ${buyerfirstn}
-    Input Text  ${BuyerLastName}   ${buyerlastn}
-    Input Text  ${BuyerEmail}   ${buyeremailentry}
-    Input Text  ${BuyerPhone}   ${buyerphoneentry}
-    Input Password  ${BuyerPW}  ${buyerpwentry}
-    Input Password  ${BuyerPWConfirm}  ${buyerpwverifyentry}
-    Input Text  ${BuyerCoName}  ${buyerconameentry}
-    Input Text  ${BuyerBusinessType}  ${buyerbustype}
+    Input Text  ${BuyerFirstName}   %{BUYFIRST}
+    Input Text  ${BuyerLastName}   %{BUYLAST}
+    Input Text  ${BuyerEmail}   %{BUYEMAIL}
+    Input Text  ${BuyerPhone}   %{BUYMOBILE}
+    Input Password  ${BuyerPW}  %{BUYPW}
+    Input Password  ${BuyerPWConfirm}  %{BUYPWVERIFY}
+    Input Text  ${BuyerCoName}  %{BUYCONAME}
+    Input Text  ${BuyerBusinessType}  %{BUYBUSTYPE}
     #Scroll Element Into View  ${RegisterToBuy}
     Click Element  ${BuyerEmirateDropDown}
     Click Element  ${DropDownSelection}
-    Input Text  ${BuyerAddress}  ${buyeraddressentry}
-    Input Text  ${BuyerTRN}  ${buyertrnentry}
+    Input Text  ${BuyerAddress}  %{BUYADDY}
+    Input Text  ${BuyerTRN}  %{BUYTRN}
     Click Element  ${TermsConditions}
     Click Element  ${RegisterToBuy}
     Wait Until Element is Visible  ${ClickToGoBack}
@@ -159,48 +159,48 @@ Buyer Registration
 Seller Registration
     [Tags]  Seller Registration
     [Documentation]
-    [Arguments]  ${SELLFIRST}  ${SELLLAST}  ${SELLEMAIL}  ${SELLMOBILE}  ${SELLPW}  ${SELLPWCONFIRM}  ${SELLCONAME}  ${SELLCONTACTN}  ${SELLTRADEB}  ${SELLCTY}  ${SELLADDY}  ${SELLPRODUCTS}  ${SELLLICN}  ${SELLSFT}  ${SELLCBKNUM}  ${SELLSWCODE}
-    ${sellerfirstn}=  Set Variable  ${SELLFIRST}
-    ${sellerlastn}=  Set Variable  ${SELLLAST}
-    ${selleremailentry}=  Set Variable  ${SELLEMAIL}
-    ${sellerphone}=  Set Variable  ${SELLMOBILE}
-    ${sellerpwentry}=  Set Variable  ${SELLPW}
-    ${sellerpwconvirmentry}=  Set Variable  ${SELLPWCONFIRM}
-    ${sellerconameentry}=  Set Variable  ${SELLCONAME}
-    ${sellercontactnum}=  Set Variable  ${SELLCONTACTN}
-    ${sellertradebrand}=  Set Variable  ${SELLTRADEB}
-    ${sellercityentry}=  Set Variable  ${SELLCTY}
-    ${selleraddressentry}=  Set Variable  ${SELLADDY}
-    ${sellerproductsentry}=  Set Variable   ${SELLPRODUCTS}
-    ${sellerlicense}=  Set Variable   ${SELLLICN}
-    ${sellersafteynum}=  Set Variable  ${SELLSFT}
-    ${sellerbanknumber}=  Set Variable  ${SELLCBKNUM}
-    ${sellerswiftcode}=  Set Variable  ${SELLSWCODE}
+#    [Arguments]  ${SELLFIRST}  ${SELLLAST}  ${SELLEMAIL}  ${SELLMOBILE}  ${SELLPW}  ${SELLPWCONFIRM}  ${SELLCONAME}  ${SELLCONTACTN}  ${SELLTRADEB}  ${SELLCTY}  ${SELLADDY}  ${SELLPRODUCTS}  ${SELLLICN}  ${SELLSFT}  ${SELLCBKNUM}  ${SELLSWCODE}
+#    ${sellerfirstn}=  Set Variable  ${SELLFIRST}
+#    ${sellerlastn}=  Set Variable  ${SELLLAST}
+#    ${selleremailentry}=  Set Variable  ${SELLEMAIL}
+#    ${sellerphone}=  Set Variable  ${SELLMOBILE}
+#    ${sellerpwentry}=  Set Variable  ${SELLPW}
+#    ${sellerpwconvirmentry}=  Set Variable  ${SELLPWCONFIRM}
+#    ${sellerconameentry}=  Set Variable  ${SELLCONAME}
+#    ${sellercontactnum}=  Set Variable  ${SELLCONTACTN}
+#    ${sellertradebrand}=  Set Variable  ${SELLTRADEB}
+#    ${sellercityentry}=  Set Variable  ${SELLCTY}
+#    ${selleraddressentry}=  Set Variable  ${SELLADDY}
+#    ${sellerproductsentry}=  Set Variable   ${SELLPRODUCTS}
+#    ${sellerlicense}=  Set Variable   ${SELLLICN}
+#    ${sellersafteynum}=  Set Variable  ${SELLSFT}
+#    ${sellerbanknumber}=  Set Variable  ${SELLCBKNUM}
+#    ${sellerswiftcode}=  Set Variable  ${SELLSWCODE}
     Set Window Size  1366   800
     Click Element  ${RegisterHeaderBtn}
     Wait Until Element is Visible  ${IWantToSellSideHeader}
     Click Element  ${SellNowBtnSideRail}
     Wait Until Element is Visible  ${IWantToSellSideHeader}
-    Input Text  ${BuyerFirstName}  ${sellerfirstn}
-    Input Text  ${BuyerLastName}   ${sellerlastn}
-    Input Text  ${SellerEmail}   ${selleremailentry}
-    Input Text  ${SellerPhoneNumber}  ${sellerphone}
-    Input Password  ${SellerPW}   ${sellerpwentry}
-    Input Password  ${SellerPWConfirm}  ${sellerpwconvirmentry}
-    Input Text  ${SellerCoName}   ${sellerconameentry}
-    Input Text  ${ContactNumber}   ${sellercontactnum}
-    Input Text  ${TradeBrandName}   ${sellertradebrand}
+    Input Text  ${BuyerFirstName}  %{SELLFIRST}
+    Input Text  ${BuyerLastName}   %{SELLLAST}
+    Input Text  ${SellerEmail}   %{SELLEMAIL}
+    Input Text  ${SellerPhoneNumber}  %{SELLMOBILE}
+    Input Password  ${SellerPW}   %{SELLPW}
+    Input Password  ${SellerPWConfirm}  %{SELLPWCONFIRM}
+    Input Text  ${SellerCoName}   %{SELLCONAME}
+    Input Text  ${ContactNumber}   %{SELLCONTACTN}
+    Input Text  ${TradeBrandName}   %{SELLTRADEB}
     Click Element  ${CompanyTypeDrop}
     Click Element  ${CompanyTypeSelection}
     Click Element  ${CountryDropDown}
     Click Element  ${CountrySelect}
-    Input Text  ${SellerCity}  ${sellercityentry}
-    Input Text  ${SellerAddress}  ${selleraddressentry}
-    Input Text  ${SellerProducts}  ${sellerproductsentry}
-    Input Text  ${TradeLicenseNum}   ${sellerlicense}
-    Input Text  ${FoodSafetyNum}  ${sellersafteynum}
-    Input Text  ${CorpBankNum}  ${sellerbanknumber}
-    Input Text  ${SwiftCode}  ${sellerswiftcode}
+    Input Text  ${SellerCity}  %{SELLCTY}
+    Input Text  ${SellerAddress}  %{SELLADDY}
+    Input Text  ${SellerProducts}  %{SELLPRODUCTS}
+    Input Text  ${TradeLicenseNum}   %{SELLLICN}
+    Input Text  ${FoodSafetyNum}  %{SELLSFT}
+    Input Text  ${CorpBankNum}  %{SELLCBKNUM}
+    Input Text  ${SwiftCode}  %{SELLSWCODE}
     Click Element  ${CurrencyDrop}
     Click Element  ${CurrencySelection}
     Click Element  ${TermsConditions}
@@ -214,20 +214,20 @@ Seller Registration
 Add Product
     [Tags]  Addition of Product
     [Documentation]
-    [Arguments]   ${PRODNAME}  ${BRANDNAME}  ${PRODSKU}  ${HSCODE}  ${MAXORDER}  ${MINORDER}  ${SPOIL}
-    ${pa_name}=    Set Variable  ${PRODNAME}
-    ${pa_brand}=  Set Variable  ${BRANDNAME}
-    ${pa_sku}=  Set Variable  ${PRODSKU}
-    ${pa_hscode}=  Set Variable  ${HSCODE}
-    ${pa_max_o}=  Set Variable  ${MAXORDER}
-    ${pa_min_o}=  Set Variable  ${MINORDER}
-    ${pa_spoil}=  Set Variable  ${SPOIL}
+#    [Arguments]   ${PRODNAME}  ${BRANDNAME}  ${PRODSKU}  ${HSCODE}  ${MAXORDER}  ${MINORDER}  ${SPOIL}
+#    ${pa_name}=    Set Variable  ${PRODNAME}
+#    ${pa_brand}=  Set Variable  ${BRANDNAME}
+#    ${pa_sku}=  Set Variable  ${PRODSKU}
+#    ${pa_hscode}=  Set Variable  ${HSCODE}
+#    ${pa_max_o}=  Set Variable  ${MAXORDER}
+#    ${pa_min_o}=  Set Variable  ${MINORDER}
+#    ${pa_spoil}=  Set Variable  ${SPOIL}
     Set Window Size  1366   800
     Click Element  ${AddNewButton}
     Wait Until Element is Visible  ${AddNewProductHeader}
     Log to Console  Enter Product Type
-    Input Text  ${ProductNameField}  ${pa_name}
-    Input Text  ${BrandNameField}  ${pa_brand}
+    Input Text  ${ProductNameField}  %{PRODNAME}
+    Input Text  ${BrandNameField}  %{BRANDNAME}
     Click Element  ${SeaLifeCatDrop}
     Click Element  ${SeaLifeCatSelection}
     Sleep  1
@@ -278,8 +278,8 @@ Add Product
     Scroll Element Into View  ${SubmitButton}
     Click Element  ${UnitOfSaleDrop}
     Click Element  ${UnitOfSaleSelectionKg}
-    Input Text      ${MinOrderField}  ${pa_min_o}
-    Input Text      ${MaxOrderField}  ${pa_max_o}
+    Input Text      ${MinOrderField}  %{MINORDER}
+    Input Text      ${MaxOrderField}  %{MAXORDER}
     Click Element   ${AdvancedPriceCheckbox}
     Input Text   ${PriceField}  65
     Sleep  2
