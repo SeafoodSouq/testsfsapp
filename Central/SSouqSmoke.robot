@@ -36,6 +36,7 @@ Existing User Login
     ${existinguser}=  Set Variable  ${EXISTINGU}
     ${existingpw}=  Set Variable  ${EXISTINGP}
     Log To Console  Log into Seafood Souq
+    Set Window Size  1366   800
     Wait Until Element is Visible   ${Login}
     Click Element  ${Login}
     Wait Until Element is Visible  ${WelcomeBack}
@@ -131,6 +132,7 @@ Buyer Registration
     ${buyerbustype}=    Set Variable   ${BUYBUSTYPE}
     ${buyeraddressentry}=    Set Variable   ${BUYADDY}
     ${buyertrnentry}=    Set Variable   ${BUYTRN}
+    Set Window Size  1366   800
     Click Element  ${RegisterHeaderBtn}
     Wait Until Element is Visible  ${BuyerRegHeader}
     Input Text  ${BuyerFirstName}   ${buyerfirstn}
@@ -141,7 +143,7 @@ Buyer Registration
     Input Password  ${BuyerPWConfirm}  ${buyerpwverifyentry}
     Input Text  ${BuyerCoName}  ${buyerconameentry}
     Input Text  ${BuyerBusinessType}  ${buyerbustype}
-    Scroll Element Into View  ${RegisterToBuy}
+    #Scroll Element Into View  ${RegisterToBuy}
     Click Element  ${BuyerEmirateDropDown}
     Click Element  ${DropDownSelection}
     Input Text  ${BuyerAddress}  ${buyeraddressentry}
@@ -174,6 +176,7 @@ Seller Registration
     ${sellersafteynum}=  Set Variable  ${SELLSFT}
     ${sellerbanknumber}=  Set Variable  ${SELLCBKNUM}
     ${sellerswiftcode}=  Set Variable  ${SELLSWCODE}
+    Set Window Size  1366   800
     Click Element  ${RegisterHeaderBtn}
     Wait Until Element is Visible  ${IWantToSellSideHeader}
     Click Element  ${SellNowBtnSideRail}
@@ -219,23 +222,12 @@ Add Product
     ${pa_max_o}=  Set Variable  ${MAXORDER}
     ${pa_min_o}=  Set Variable  ${MINORDER}
     ${pa_spoil}=  Set Variable  ${SPOIL}
+    Set Window Size  1366   800
     Click Element  ${AddNewButton}
     Wait Until Element is Visible  ${AddNewProductHeader}
+    Log to Console  Enter Product Type
     Input Text  ${ProductNameField}  ${pa_name}
     Input Text  ${BrandNameField}  ${pa_brand}
-    Sleep  2
-    Click Element  ${CountryOriginDrop}
-    Sleep  2
-    Capture Page Screenshot
-    Click Element  ${CountryOriginSelection}
-    Click Element  ${ProcessingCountryDrop}
-    Click Element  ${ProcessingCountrySelection}
-    Click Element  ${PortLoadingDrop}
-    Click Element  ${PortLoadingSelection}
-    Click Element  ${UnitOfSaleDrop}
-    Click Element  ${UnitOfSaleSelectionKg}
-    Scroll Element Into View  ${CompanyInfoHeader}
-    #Sleep  1
     Click Element  ${SeaLifeCatDrop}
     Click Element  ${SeaLifeCatSelection}
     Sleep  1
@@ -253,14 +245,13 @@ Add Product
     Click Element  ${SeaLifeSubSpeciesVarDrop}
     Sleep  1
     Click Element  ${SeaLifeSubSpeciesVarSelection}
-    Scroll Element Into View  ${UploadImageScrollTo}
-    Click Element   ${CoProdSKUField}
-#    Input Text      ${CoProdSKUField}   ${pa_sku}
-#    Input Text      ${CoHsCodeField}  ${pa_hscode}
-    Click Element      ${CoHsCodeLookup}
-    Input Text      ${MinOrderField}  ${pa_min_o}
-    Input Text      ${MaxOrderField}  ${pa_max_o}
-    Scroll Element Into View   ${ProductFeatureHeader}
+    Log to Console  Enter Product Features
+    Click Element   ${RaisedDrop}
+    Click Element   ${RaisedSelection}
+    Click Element   ${TreatmentDrop}
+    Click Element   ${TreatmentSelection}
+    Log to Console  Add Product Images
+    Scroll Element Into View   ${ProductDetailsHeader}
     Click Element  ${UploadImage}
     Capture Page Screenshot
     Sleep  4
@@ -268,28 +259,31 @@ Add Product
     Sleep  3
     Capture Page Screenshot
     Wait Until Element Is Visible  ${ImageOneUpload}
+    Sleep  2
+    Log to Console  Enter Product Details
+    Scroll Element Into View   ${ProductPriceHeader}
+#    Click Element   ${CoProdSKUField}
+#    Input Text      ${CoProdSKUField}   ${pa_sku}
+#    Input Text      ${CoHsCodeField}  ${pa_hscode}
+    Click Element  ${CountryOriginDrop}
+    Sleep  2
     Capture Page Screenshot
-    Scroll Element Into View  ${AdvancedPriceHeader}
-    Click Element   ${RaisedDrop}
-    Click Element   ${RaisedSelection}
-    Click Element   ${TreatmentDrop}
-    Click Element   ${TreatmentSelection}
-    Scroll Element Into View  ${CompanyCatFooter}
+    Click Element  ${CountryOriginSelection}
+    Click Element  ${ProcessingCountryDrop}
+    Click Element  ${ProcessingCountrySelection}
+    Click Element  ${PortLoadingDrop}
+    Click Element  ${PortLoadingSelection}
+    Click Element  ${CoHsCodeLookup}
+    Log to Console  Enter Product Pricing
+    Scroll Element Into View  ${SubmitButton}
+    Click Element  ${UnitOfSaleDrop}
+    Click Element  ${UnitOfSaleSelectionKg}
+    Input Text      ${MinOrderField}  ${pa_min_o}
+    Input Text      ${MaxOrderField}  ${pa_max_o}
     Click Element   ${AdvancedPriceCheckbox}
-    Scroll Element Into View   ${SubmitButton}
     Input Text   ${PriceField}  65
     Sleep  2
     Click Element   ${SubmitButton}
-    Scroll Element Into View   ${ProductFeatureHeader}
     Sleep  8
     Capture Page Screenshot
-
-
-
-
-
-
-
-
-
 
