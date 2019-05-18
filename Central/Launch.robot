@@ -26,7 +26,14 @@ Existing User Signin
     Log To Console  Log in
     SSouqSmoke.Navigate to Page
     SSouqSmoke.Existing User Login
+
+
+Shop Workflow
+    Log To Console  Buyer Purchase
+    SSouqSmoke.Navigate to Page
+    SSouqSmoke.Existing User Login
     SSouqSmoke.Shop
+
 
 Buyer Registration
     Log To Console  Buy
