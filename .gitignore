@@ -1,6 +1,7 @@
 .cache/
 .env
 .idea/
+.idea/workspace.xml
 **/.cache/
 **/.idea/
 logs/

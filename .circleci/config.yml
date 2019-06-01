@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:2.7-jessie-node-browsers-legacy
+    working_directory:  ~/RobotFramework
+    steps:
+      - checkout
+      - run: sudo pip install -r requirements.txt
+      - run:  robot -d results  Central/Launch.robot
