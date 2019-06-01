@@ -43,8 +43,7 @@ Buyer Registration
 Seller Registration
     Log To Console  Sell
     SSouqSmoke.Navigate to Page  https://dev.seafoodsouq.com
-    SSouqSmoke.Seller Registration  Hello  World  SellerRonH@seafoodsouq.com   (201) 555-1212   Test1234    Test1234     Seller Test Co    4    RonTest    Brooklyn    101 Jefferson Ave    Salmon, Cod, Sardines    212    1234    12342    12
-
+    SSouqSmoke.Seller Registration
 
 Add Product
     Log To Console  Add Product
