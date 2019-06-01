@@ -1,0 +1,571 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.6.4 on darwin)" generated="20190517 18:15:57.131">
+<suite id="s1" name="Launch" source="/Users/ronharley/AutomatedTests/SSouq/Central/Launch.robot">
+<test id="s1-t1" name="Seller Registration">
+<kw name="Begin Web Test" library="Common" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20190517 18:15:57.391" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20190517 18:15:57.391" endtime="20190517 18:15:59.228"></status>
+</kw>
+<status status="PASS" starttime="20190517 18:15:57.391" endtime="20190517 18:15:59.228"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Sell</arg>
+</arguments>
+<status status="PASS" starttime="20190517 18:15:59.229" endtime="20190517 18:15:59.230"></status>
+</kw>
+<kw name="Navigate_To_Page" library="SSouqSmoke">
+<tags>
+<tag>Go to Seafood Souq url</tag>
+</tags>
+<arguments>
+<arg>https://dev.seafoodsouq.com</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${SFSURL}</arg>
+</arguments>
+<assign>
+<var>${sfstesturl}</var>
+</assign>
+<msg timestamp="20190517 18:15:59.233" level="INFO">${sfstesturl} = https://dev.seafoodsouq.com</msg>
+<status status="PASS" starttime="20190517 18:15:59.232" endtime="20190517 18:15:59.233"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>Navigating to Seafood Souq</arg>
+</arguments>
+<status status="PASS" starttime="20190517 18:15:59.233" endtime="20190517 18:15:59.234"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>${sfstesturl}</arg>
+</arguments>
+<msg timestamp="20190517 18:15:59.234" level="INFO">Opening url 'https://dev.seafoodsouq.com'</msg>
+<status status="PASS" starttime="20190517 18:15:59.234" endtime="20190517 18:16:10.526"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20190517 18:16:10.526" endtime="20190517 18:16:10.728"></status>
+</kw>
+<status status="PASS" starttime="20190517 18:15:59.230" endtime="20190517 18:16:10.728"></status>
+</kw>
+<kw name="Seller Registration" library="SSouqSmoke">
+<tags>
+<tag>Seller Registration</tag>
+</tags>
+<arguments>
+<arg>Hello</arg>
+<arg>World</arg>
+<arg>SellerRonH@seafoodsouq.com</arg>
+<arg>(201) 555-1212</arg>
+<arg>Test1234</arg>
+<arg>Test1234</arg>
+<arg>Seller Test Co</arg>
+<arg>4</arg>
+<arg>RonTest</arg>
+<arg>Brooklyn</arg>
+<arg>101 Jefferson Ave</arg>
+<arg>Salmon, Cod, Sardines</arg>
+<arg>212</arg>
+<arg>1234</arg>
+<arg>12342</arg>
+<arg>12</arg>
+</arguments>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${SELLFIRST}</arg>
+</arguments>
+<assign>
+<var>${sellerfirstn}</var>
+</assign>
+<msg timestamp="20190517 18:16:10.729" level="INFO">${sellerfirstn} = Hello</msg>
+<status status="PASS" starttime="20190517 18:16:10.729" endtime="20190517 18:16:10.729"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${SELLLAST}</arg>
+</arguments>
+<assign>
+<var>${sellerlastn}</var>
+</assign>
+<msg timestamp="20190517 18:16:10.729" level="INFO">${sellerlastn} = World</msg>
+<status status="PASS" starttime="20190517 18:16:10.729" endtime="20190517 18:16:10.729"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${SELLEMAIL}</arg>
+</arguments>
+<assign>
+<var>${selleremailentry}</var>
+</assign>
+<msg timestamp="20190517 18:16:10.730" level="INFO">${selleremailentry} = SellerRonH@seafoodsouq.com</msg>
+<status status="PASS" starttime="20190517 18:16:10.729" endtime="20190517 18:16:10.730"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${SELLMOBILE}</arg>
+</arguments>
+<assign>
+<var>${sellerphone}</var>
+</assign>
+<msg timestamp="20190517 18:16:10.730" level="INFO">${sellerphone} = (201) 555-1212</msg>
+<status status="PASS" starttime="20190517 18:16:10.730" endtime="20190517 18:16:10.730"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${SELLPW}</arg>
+</arguments>
+<assign>
+<var>${sellerpwentry}</var>
+</assign>
+<msg timestamp="20190517 18:16:10.730" level="INFO">${sellerpwentry} = Test1234</msg>
+<status status="PASS" starttime="20190517 18:16:10.730" endtime="20190517 18:16:10.730"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${SELLPWCONFIRM}</arg>
+</arguments>
+<assign>
+<var>${sellerpwconvirmentry}</var>
+</assign>
+<msg timestamp="20190517 18:16:10.731" level="INFO">${sellerpwconvirmentry} = Test1234</msg>
+<status status="PASS" starttime="20190517 18:16:10.730" endtime="20190517 18:16:10.731"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${SELLCONAME}</arg>
+</arguments>
+<assign>
+<var>${sellerconameentry}</var>
+</assign>
+<msg timestamp="20190517 18:16:10.731" level="INFO">${sellerconameentry} = Seller Test Co</msg>
+<status status="PASS" starttime="20190517 18:16:10.731" endtime="20190517 18:16:10.731"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${SELLCONTACTN}</arg>
+</arguments>
+<assign>
+<var>${sellercontactnum}</var>
+</assign>
+<msg timestamp="20190517 18:16:10.731" level="INFO">${sellercontactnum} = 4</msg>
+<status status="PASS" starttime="20190517 18:16:10.731" endtime="20190517 18:16:10.731"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${SELLTRADEB}</arg>
+</arguments>
+<assign>
+<var>${sellertradebrand}</var>
+</assign>
+<msg timestamp="20190517 18:16:10.732" level="INFO">${sellertradebrand} = RonTest</msg>
+<status status="PASS" starttime="20190517 18:16:10.732" endtime="20190517 18:16:10.732"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${SELLCTY}</arg>
+</arguments>
+<assign>
+<var>${sellercityentry}</var>
+</assign>
+<msg timestamp="20190517 18:16:10.732" level="INFO">${sellercityentry} = Brooklyn</msg>
+<status status="PASS" starttime="20190517 18:16:10.732" endtime="20190517 18:16:10.732"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${SELLADDY}</arg>
+</arguments>
+<assign>
+<var>${selleraddressentry}</var>
+</assign>
+<msg timestamp="20190517 18:16:10.733" level="INFO">${selleraddressentry} = 101 Jefferson Ave</msg>
+<status status="PASS" starttime="20190517 18:16:10.732" endtime="20190517 18:16:10.733"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${SELLPRODUCTS}</arg>
+</arguments>
+<assign>
+<var>${sellerproductsentry}</var>
+</assign>
+<msg timestamp="20190517 18:16:10.733" level="INFO">${sellerproductsentry} = Salmon, Cod, Sardines</msg>
+<status status="PASS" starttime="20190517 18:16:10.733" endtime="20190517 18:16:10.733"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${SELLLICN}</arg>
+</arguments>
+<assign>
+<var>${sellerlicense}</var>
+</assign>
+<msg timestamp="20190517 18:16:10.734" level="INFO">${sellerlicense} = 212</msg>
+<status status="PASS" starttime="20190517 18:16:10.733" endtime="20190517 18:16:10.734"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${SELLSFT}</arg>
+</arguments>
+<assign>
+<var>${sellersafteynum}</var>
+</assign>
+<msg timestamp="20190517 18:16:10.734" level="INFO">${sellersafteynum} = 1234</msg>
+<status status="PASS" starttime="20190517 18:16:10.734" endtime="20190517 18:16:10.734"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${SELLCBKNUM}</arg>
+</arguments>
+<assign>
+<var>${sellerbanknumber}</var>
+</assign>
+<msg timestamp="20190517 18:16:10.734" level="INFO">${sellerbanknumber} = 12342</msg>
+<status status="PASS" starttime="20190517 18:16:10.734" endtime="20190517 18:16:10.734"></status>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>${SELLSWCODE}</arg>
+</arguments>
+<assign>
+<var>${sellerswiftcode}</var>
+</assign>
+<msg timestamp="20190517 18:16:10.735" level="INFO">${sellerswiftcode} = 12</msg>
+<status status="PASS" starttime="20190517 18:16:10.734" endtime="20190517 18:16:10.735"></status>
+</kw>
+<kw name="Set Window Size" library="SeleniumLibrary">
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<arguments>
+<arg>1366</arg>
+<arg>800</arg>
+</arguments>
+<status status="PASS" starttime="20190517 18:16:10.735" endtime="20190517 18:16:10.845"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${RegisterHeaderBtn}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:10.846" level="INFO">Clicking element '(//a[contains(.,'Register')])[2]'.</msg>
+<status status="PASS" starttime="20190517 18:16:10.845" endtime="20190517 18:16:10.942"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${IWantToSellSideHeader}</arg>
+</arguments>
+<status status="PASS" starttime="20190517 18:16:10.943" endtime="20190517 18:16:12.560"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${SellNowBtnSideRail}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:12.561" level="INFO">Clicking element '//button[contains(.,'SELL NOW')]'.</msg>
+<status status="PASS" starttime="20190517 18:16:12.561" endtime="20190517 18:16:12.714"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${IWantToSellSideHeader}</arg>
+</arguments>
+<status status="PASS" starttime="20190517 18:16:12.714" endtime="20190517 18:16:12.756"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${BuyerFirstName}</arg>
+<arg>${sellerfirstn}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:12.756" level="INFO">Typing text 'Hello' into text field '//input[@placeholder='First Name']'.</msg>
+<status status="PASS" starttime="20190517 18:16:12.756" endtime="20190517 18:16:12.906"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${BuyerLastName}</arg>
+<arg>${sellerlastn}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:12.907" level="INFO">Typing text 'World' into text field '//input[@placeholder='Last Name']'.</msg>
+<status status="PASS" starttime="20190517 18:16:12.907" endtime="20190517 18:16:13.023"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SellerEmail}</arg>
+<arg>${selleremailentry}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:13.024" level="INFO">Typing text 'SellerRonH@seafoodsouq.com' into text field '//input[@placeholder='Email']'.</msg>
+<status status="PASS" starttime="20190517 18:16:13.023" endtime="20190517 18:16:13.251"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SellerPhoneNumber}</arg>
+<arg>${sellerphone}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:13.252" level="INFO">Typing text '(201) 555-1212' into text field '//input[@type='tel']'.</msg>
+<status status="PASS" starttime="20190517 18:16:13.251" endtime="20190517 18:16:13.422"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SellerPW}</arg>
+<arg>${sellerpwentry}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:13.423" level="INFO">Typing password into text field '//input[@placeholder='Password']'.</msg>
+<status status="PASS" starttime="20190517 18:16:13.423" endtime="20190517 18:16:13.512"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SellerPWConfirm}</arg>
+<arg>${sellerpwconvirmentry}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:13.512" level="INFO">Typing password into text field '//input[@placeholder='Repeat Password']'.</msg>
+<status status="PASS" starttime="20190517 18:16:13.512" endtime="20190517 18:16:13.596"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SellerCoName}</arg>
+<arg>${sellerconameentry}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:13.597" level="INFO">Typing text 'Seller Test Co' into text field '//input[@placeholder='Company Name']'.</msg>
+<status status="PASS" starttime="20190517 18:16:13.597" endtime="20190517 18:16:13.775"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${ContactNumber}</arg>
+<arg>${sellercontactnum}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:13.776" level="INFO">Typing text '4' into text field '//input[@placeholder='Contact Number']'.</msg>
+<status status="PASS" starttime="20190517 18:16:13.775" endtime="20190517 18:16:13.841"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TradeBrandName}</arg>
+<arg>${sellertradebrand}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:13.841" level="INFO">Typing text 'RonTest' into text field '//input[@placeholder='Trade / Brand Name']'.</msg>
+<status status="PASS" starttime="20190517 18:16:13.841" endtime="20190517 18:16:13.963"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${CompanyTypeDrop}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:13.963" level="INFO">Clicking element '//span[@title='Select an option...']'.</msg>
+<status status="PASS" starttime="20190517 18:16:13.963" endtime="20190517 18:16:14.033"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${CompanyTypeSelection}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:14.034" level="INFO">Clicking element '//option[contains(text(),'Producer')]'.</msg>
+<status status="PASS" starttime="20190517 18:16:14.033" endtime="20190517 18:16:14.076"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${CountryDropDown}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:14.076" level="INFO">Clicking element '//span[@title='Country']'.</msg>
+<status status="PASS" starttime="20190517 18:16:14.076" endtime="20190517 18:16:14.173"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>//input[@class='select2-search__field']</arg>
+<arg>United Sta</arg>
+</arguments>
+<msg timestamp="20190517 18:16:14.173" level="INFO">Typing text 'United Sta' into text field '//input[@class='select2-search__field']'.</msg>
+<status status="PASS" starttime="20190517 18:16:14.173" endtime="20190517 18:16:14.352"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${CountrySelect}</arg>
+</arguments>
+<status status="PASS" starttime="20190517 18:16:14.352" endtime="20190517 18:16:14.372"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190517 18:16:15.374" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20190517 18:16:14.373" endtime="20190517 18:16:15.374"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${CountrySelect}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:15.375" level="INFO">Clicking element '//div[@id='content_light']/app-registration-seller/div/form/div[2]/div[6]/div/span/span/span/span/span'.</msg>
+<status status="PASS" starttime="20190517 18:16:15.375" endtime="20190517 18:16:15.414"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SellerCity}</arg>
+<arg>${sellercityentry}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:15.414" level="INFO">Typing text 'Brooklyn' into text field '//input[@placeholder='City']'.</msg>
+<status status="PASS" starttime="20190517 18:16:15.414" endtime="20190517 18:16:15.510"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SellerAddress}</arg>
+<arg>${selleraddressentry}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:15.511" level="INFO">Typing text '101 Jefferson Ave' into text field '//input[@placeholder='Address']'.</msg>
+<status status="PASS" starttime="20190517 18:16:15.510" endtime="20190517 18:16:15.658"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SellerProducts}</arg>
+<arg>${sellerproductsentry}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:15.659" level="INFO">Typing text 'Salmon, Cod, Sardines' into text field '//input[@placeholder='Products Interested in Selling']'.</msg>
+<status status="PASS" starttime="20190517 18:16:15.658" endtime="20190517 18:16:15.832"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${TradeLicenseNum}</arg>
+<arg>${sellerlicense}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:15.833" level="INFO">Typing text '212' into text field '//input[@placeholder='Trade License Number']'.</msg>
+<status status="PASS" starttime="20190517 18:16:15.832" endtime="20190517 18:16:15.917"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${FoodSafetyNum}</arg>
+<arg>${sellersafteynum}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:15.918" level="INFO">Typing text '1234' into text field '//input[@placeholder='Food Safety Certificate NUmber ']'.</msg>
+<status status="PASS" starttime="20190517 18:16:15.917" endtime="20190517 18:16:15.992"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${CorpBankNum}</arg>
+<arg>${sellerbanknumber}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:15.993" level="INFO">Typing text '12342' into text field '//input[@placeholder='Bank Account Number']'.</msg>
+<status status="PASS" starttime="20190517 18:16:15.992" endtime="20190517 18:16:16.075"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${SwiftCode}</arg>
+<arg>${sellerswiftcode}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:16.076" level="INFO">Typing text '12' into text field '//input[@placeholder='Swift Code ']'.</msg>
+<status status="PASS" starttime="20190517 18:16:16.076" endtime="20190517 18:16:16.143"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${CurrencyDrop}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:16.143" level="INFO">Clicking element '//select[@formcontrolname='CurrencyofTrade']'.</msg>
+<status status="PASS" starttime="20190517 18:16:16.143" endtime="20190517 18:16:16.224"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${CurrencySelection}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:16.224" level="INFO">Clicking element '//option[contains(text(),'USD')]'.</msg>
+<status status="PASS" starttime="20190517 18:16:16.224" endtime="20190517 18:16:16.257"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${TermsConditions}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:16.257" level="INFO">Clicking element '//input[@type='checkbox']'.</msg>
+<status status="PASS" starttime="20190517 18:16:16.257" endtime="20190517 18:16:16.542"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${RegisterToSell}</arg>
+</arguments>
+<msg timestamp="20190517 18:16:16.543" level="INFO">Clicking element '//button[contains(.,'REGISTER TO SELL')]'.</msg>
+<status status="PASS" starttime="20190517 18:16:16.542" endtime="20190517 18:16:16.645"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${ClickToGoBack}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190517 18:16:22.202" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20190517 18:16:21.753" endtime="20190517 18:16:22.202"></status>
+</kw>
+<msg timestamp="20190517 18:16:22.203" level="FAIL">Element '//h2[contains(.,'Or to go back home')]' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20190517 18:16:16.645" endtime="20190517 18:16:22.203"></status>
+</kw>
+<status status="FAIL" starttime="20190517 18:16:10.728" endtime="20190517 18:16:22.203"></status>
+</kw>
+<kw name="End Web Test" library="Common" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20190517 18:16:22.204" endtime="20190517 18:16:22.284"></status>
+</kw>
+<status status="PASS" starttime="20190517 18:16:22.204" endtime="20190517 18:16:22.284"></status>
+</kw>
+<status status="FAIL" starttime="20190517 18:15:57.390" endtime="20190517 18:16:22.285" critical="yes">Element '//h2[contains(.,'Or to go back home')]' not visible after 5 seconds.</status>
+</test>
+<doc>Seafood Souq Smoke Test</doc>
+<status status="FAIL" starttime="20190517 18:15:57.134" endtime="20190517 18:16:22.286"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Launch">Launch</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
