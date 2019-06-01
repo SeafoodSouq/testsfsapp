@@ -83,7 +83,7 @@ ${TradeBrandName}  //input[@placeholder='Trade / Brand Name']
 ${CompanyTypeDrop}  //span[@title='Select an option...']
 ${CompanyTypeSelection}  //option[contains(text(),'Producer')]
 ${CountryDropDown}  //span[@title='Country']
-${CountrySelect}  //body//option[232]
+${CountrySelect}   //div[@id='content_light']/app-registration-seller/div/form/div[2]/div[6]/div/span/span/span/span/span
 ${SellerCity}  //input[@placeholder='City']
 ${SellerAddress}  //input[@placeholder='Address']
 ${SellerProducts}  //input[@placeholder='Products Interested in Selling']

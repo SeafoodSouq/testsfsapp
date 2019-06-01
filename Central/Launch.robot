@@ -12,7 +12,7 @@ Test Teardown  End Web Test
 
 *** Variables ***
 
-${BROWSER}   headlessfirefox
+${BROWSER}   chrome
 
 
 *** Test Cases ***
@@ -26,7 +26,14 @@ Existing User Signin
     Log To Console  Log in
     SSouqSmoke.Navigate to Page  https://dev.seafoodsouq.com
     SSouqSmoke.Existing User Login
+
+
+Shop Workflow
+    Log To Console  Buyer Purchase
+    SSouqSmoke.Navigate to Page
+    SSouqSmoke.Existing User Login
     SSouqSmoke.Shop
+
 
 Buyer Registration
     Log To Console  Buy
@@ -35,9 +42,8 @@ Buyer Registration
 
 Seller Registration
     Log To Console  Sell
-    SSouqSmoke.Navigate to Page   https://qa.seafoodsouq.com
+    SSouqSmoke.Navigate to Page  https://dev.seafoodsouq.com
     SSouqSmoke.Seller Registration
-
 
 Add Product
     Log To Console  Add Product

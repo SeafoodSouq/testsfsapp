@@ -193,6 +193,9 @@ Seller Registration
     Click Element  ${CompanyTypeDrop}
     Click Element  ${CompanyTypeSelection}
     Click Element  ${CountryDropDown}
+    Input Text  //input[@class='select2-search__field']   United Sta
+    Wait Until Element is Visible  ${CountrySelect}
+    Sleep  1
     Click Element  ${CountrySelect}
     Input Text  ${SellerCity}  %{SELLCTY}
     Input Text  ${SellerAddress}  %{SELLADDY}
