@@ -26,6 +26,7 @@ Navigate_To_Page
 #    ${sfstesturl}=  Set Variable  ${SFSURL}
     Log To Console  Navigating to Seafood Souq
     go to   %{SFSURL}
+    Sleep  10
     maximize browser window
 
 
