@@ -218,7 +218,7 @@ Seller Registration
     Click Element  ${CurrencySelection}
     Click Element  ${TermsConditions}
     Click Element  ${RegisterToSell}
-    Click Element  ${RegisterToSell}
+    Sleep  4
     Wait Until Element is Visible  ${ClickToGoBack}  10
     Click Element  ${ClickToGoBack}
     Wait Until Element is Visible  ${RegisterHeaderBtn}  10
