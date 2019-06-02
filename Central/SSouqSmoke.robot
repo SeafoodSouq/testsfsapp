@@ -149,8 +149,8 @@ Buyer Registration
     #Scroll Element Into View  ${RegisterToBuy}
     Click Element  ${BuyerEmirateDropDown}
     Click Element  ${DropDownSelection}
-    Input Text  ${BuyerAddress}  ${buyeraddressentry}
-    Input Text  ${BuyerTRN}  ${buyertrnentry}
+    Input Text  ${BuyerAddress}  %{BUYADDY}
+    Input Text  ${BuyerTRN}  %{BUYTRN}
     Click Element  ${ProductsInterestedDrop}
     Click Element  ${AtlanticSalmonInterested}
     Input Text  ${AdditionalItemsEntry}  Mahi
