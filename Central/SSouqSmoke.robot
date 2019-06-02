@@ -79,6 +79,8 @@ Shop
     Sleep  2
     Click Element   ${CartHeaderMenu}
     Sleep  4
+    Reload Page
+    Sleep  4
     Click Element   ${CartHeaderMenu}
     Sleep  2
     Scroll Element Into View  ${ShippingDeliveryBtn}
