@@ -25,9 +25,15 @@ Navigate_To_Page
 #    [Arguments]  ${SFSURL}
 #    ${sfstesturl}=  Set Variable  ${SFSURL}
     Log To Console  Navigating to Seafood Souq
+<<<<<<< HEAD
     go to   %{SFSURL}
     Sleep  10
+=======
+    go to   ${sfstesturl}
+    Sleep  12
+>>>>>>> Sprint_5_Updates
     maximize browser window
+    Set Window Size  1366   800
 
 
 Existing User Login
@@ -44,7 +50,8 @@ Existing User Login
     Input Text  ${EmailField}   ${existinguser}
     Input Password  ${PasswordField}   ${existingpw}
     Click Element  ${LoginBtn}
-    Wait Until Element is Visible  ${HeadShotLogo}
+    Wait Until Element is Visible   ${SettingsToggleArrow}  7
+#    Wait Until Element is Visible  ${ShopMenuHeader}  5
 
 
 Shop
@@ -147,8 +154,16 @@ Buyer Registration
     #Scroll Element Into View  ${RegisterToBuy}
     Click Element  ${BuyerEmirateDropDown}
     Click Element  ${DropDownSelection}
+<<<<<<< HEAD
     Input Text  ${BuyerAddress}  %{BUYADDY}
     Input Text  ${BuyerTRN}  %{BUYTRN}
+=======
+    Input Text  ${BuyerAddress}  ${buyeraddressentry}
+    Input Text  ${BuyerTRN}  ${buyertrnentry}
+    Click Element  ${ProductsInterestedDrop}
+    Click Element  ${AtlanticSalmonInterested}
+    Input Text  ${AdditionalItemsEntry}  Mahi
+>>>>>>> Sprint_5_Updates
     Click Element  ${TermsConditions}
     Click Element  ${RegisterToBuy}
     Wait Until Element is Visible  ${ClickToGoBack}
@@ -194,9 +209,9 @@ Seller Registration
     Click Element  ${CompanyTypeDrop}
     Click Element  ${CompanyTypeSelection}
     Click Element  ${CountryDropDown}
-    Input Text  //input[@class='select2-search__field']   United Sta
-    Wait Until Element is Visible  ${CountrySelect}
-    Sleep  1
+#    Input Text  //input[@class='select2-search__field']   United Sta
+#    Wait Until Element is Visible  ${CountrySelect}
+#    Sleep  1
     Click Element  ${CountrySelect}
     Input Text  ${SellerCity}  %{SELLCTY}
     Input Text  ${SellerAddress}  %{SELLADDY}
@@ -233,6 +248,7 @@ Add Product
     Input Text  ${ProductNameField}  %{PRODNAME}
     Input Text  ${BrandNameField}  %{BRANDNAME}
     Click Element  ${SeaLifeCatDrop}
+    Sleep  1
     Click Element  ${SeaLifeCatSelection}
     Sleep  1
     Click Element  ${SeaLifeCatDrop}
@@ -279,7 +295,8 @@ Add Product
     Click Element  ${PortLoadingSelection}
     Click Element  ${CoHsCodeLookup}
     Log to Console  Enter Product Pricing
-    Scroll Element Into View  ${SubmitButton}
+    #Scroll Element Into View  ${SubmitButton}
+    Scroll Element Into View  //span[contains(.,'Head Off Gutted')]
     Click Element  ${UnitOfSaleDrop}
     Click Element  ${UnitOfSaleSelectionKg}
     Input Text      ${MinOrderField}  %{MINORDER}
