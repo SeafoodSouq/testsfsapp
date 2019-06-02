@@ -19,12 +19,11 @@ ${BROWSER}   Headless Chrome
 
 Navigate to Page
     Log To Console  Navigating to Seafood Souq
-    SSouqSmoke.Navigate to Page   https://dev.seafoodsouq.com
-
+    SSouqSmoke.Navigate to Page
 
 Existing User Signin
     Log To Console  Log in
-    SSouqSmoke.Navigate to Page  https://dev.seafoodsouq.com
+    SSouqSmoke.Navigate to Page
     SSouqSmoke.Existing User Login
 
 
@@ -37,16 +36,16 @@ Shop Workflow
 
 Buyer Registration
     Log To Console  Buy
-    SSouqSmoke.Navigate to Page   https://qa.seafoodsouq.com
+    SSouqSmoke.Navigate to Page
     SSouqSmoke.Buyer Registration
 
 Seller Registration
     Log To Console  Sell
-    SSouqSmoke.Navigate to Page  https://dev.seafoodsouq.com
+    SSouqSmoke.Navigate to Page
     SSouqSmoke.Seller Registration
 
 Add Product
     Log To Console  Add Product
-    SSouqSmoke.Navigate to Page  https://qa.seafoodsouq.com
+    SSouqSmoke.Navigate to Page
     SSouqSmoke.Existing User Login
     SSouqSmoke.Add Product
