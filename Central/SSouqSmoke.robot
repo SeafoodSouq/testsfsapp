@@ -42,8 +42,8 @@ Existing User Login
     Wait Until Element is Visible   ${Login}
     Click Element  ${Login}
     Wait Until Element is Visible  ${WelcomeBack}
-    Input Text  ${EmailField}   ${existinguser}
-    Input Password  ${PasswordField}   ${existingpw}
+    Input Text  ${EmailField}   %{EXISTINGU}
+    Input Password  ${PasswordField}   %{EXISTINGP}
     Click Element  ${LoginBtn}
     Wait Until Element is Visible   ${SettingsToggleArrow}  7
 #    Wait Until Element is Visible  ${ShopMenuHeader}  5
