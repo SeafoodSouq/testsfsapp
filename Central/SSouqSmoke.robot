@@ -25,13 +25,8 @@ Navigate_To_Page
 #    [Arguments]  ${SFSURL}
 #    ${sfstesturl}=  Set Variable  ${SFSURL}
     Log To Console  Navigating to Seafood Souq
-<<<<<<< HEAD
     go to   %{SFSURL}
     Sleep  10
-=======
-    go to   ${sfstesturl}
-    Sleep  12
->>>>>>> Sprint_5_Updates
     maximize browser window
     Set Window Size  1366   800
 
@@ -154,16 +149,11 @@ Buyer Registration
     #Scroll Element Into View  ${RegisterToBuy}
     Click Element  ${BuyerEmirateDropDown}
     Click Element  ${DropDownSelection}
-<<<<<<< HEAD
-    Input Text  ${BuyerAddress}  %{BUYADDY}
-    Input Text  ${BuyerTRN}  %{BUYTRN}
-=======
     Input Text  ${BuyerAddress}  ${buyeraddressentry}
     Input Text  ${BuyerTRN}  ${buyertrnentry}
     Click Element  ${ProductsInterestedDrop}
     Click Element  ${AtlanticSalmonInterested}
     Input Text  ${AdditionalItemsEntry}  Mahi
->>>>>>> Sprint_5_Updates
     Click Element  ${TermsConditions}
     Click Element  ${RegisterToBuy}
     Wait Until Element is Visible  ${ClickToGoBack}
