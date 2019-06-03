@@ -145,7 +145,7 @@ Buyer Registration
     Wait Until Element is Visible  ${BuyerRegHeader}
     Input Text  ${BuyerFirstName}   %{BUYFIRST}
     Input Text  ${BuyerLastName}   %{BUYLAST}
-    Input Text  ${BuyerEmail}   ${BuyerEmailRandom}@buyersfs.com
+    Input Text  ${BuyerEmail}   ${BuyerEmailRandom}@TESTbuyersfs.com
     Input Text  ${BuyerPhone}   %{BUYMOBILE}
     Input Password  ${BuyerPW}  %{BUYPW}
     Input Password  ${BuyerPWConfirm}  %{BUYPWVERIFY}
@@ -196,11 +196,11 @@ Seller Registration
     Wait Until Element is Visible  ${IWantToSellSideHeader}
     Input Text  ${BuyerFirstName}  %{SELLFIRST}
     Input Text  ${BuyerLastName}   %{SELLLAST}
-    Input Text  ${SellerEmail}   ${SellerEmailRandom}@sellersfs.com
+    Input Text  ${SellerEmail}   ${SellerEmailRandom}@TESTsellersfs.com
     Input Text  ${SellerPhoneNumber}  %{SELLMOBILE}
     Input Password  ${SellerPW}   %{SELLPW}
     Input Password  ${SellerPWConfirm}  %{SELLPWCONFIRM}
-    Input Text  ${SellerCoName}   ${SellerStoreRandom}TestStoreSFS
+    Input Text  ${SellerCoName}   ${SellerStoreRandom}TESTStoreSFS
     Input Text  ${ContactNumber}   %{SELLCONTACTN}
     Input Text  ${TradeBrandName}   %{SELLTRADEB}
     Click Element  ${CompanyTypeDrop}
