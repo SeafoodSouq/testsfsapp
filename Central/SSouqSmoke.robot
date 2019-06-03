@@ -139,12 +139,13 @@ Buyer Registration
 #    ${buyerbustype}=    Set Variable   ${BUYBUSTYPE}
 #    ${buyeraddressentry}=    Set Variable   ${BUYADDY}
 #    ${buyertrnentry}=    Set Variable   ${BUYTRN}
+    ${BuyerEmailRandom}=  Generate Random String  8
     Set Window Size  1366   800
     Click Element  ${RegisterHeaderBtn}
     Wait Until Element is Visible  ${BuyerRegHeader}
     Input Text  ${BuyerFirstName}   %{BUYFIRST}
     Input Text  ${BuyerLastName}   %{BUYLAST}
-    Input Text  ${BuyerEmail}   %{BUYEMAIL}
+    Input Text  ${BuyerEmail}   ${BuyerEmailRandom}@buyersfs.com
     Input Text  ${BuyerPhone}   %{BUYMOBILE}
     Input Password  ${BuyerPW}  %{BUYPW}
     Input Password  ${BuyerPWConfirm}  %{BUYPWVERIFY}
@@ -186,6 +187,8 @@ Seller Registration
 #    ${sellersafteynum}=  Set Variable  ${SELLSFT}
 #    ${sellerbanknumber}=  Set Variable  ${SELLCBKNUM}
 #    ${sellerswiftcode}=  Set Variable  ${SELLSWCODE}
+    ${SellerEmailRandom}=  Generate Random String  8
+    ${SellerStoreRandom}=  Generate Random String  4
     Set Window Size  1366   800
     Click Element  ${RegisterHeaderBtn}
     Wait Until Element is Visible  ${IWantToSellSideHeader}
@@ -193,11 +196,11 @@ Seller Registration
     Wait Until Element is Visible  ${IWantToSellSideHeader}
     Input Text  ${BuyerFirstName}  %{SELLFIRST}
     Input Text  ${BuyerLastName}   %{SELLLAST}
-    Input Text  ${SellerEmail}   %{SELLEMAIL}
+    Input Text  ${SellerEmail}   ${SellerEmailRandom}@sellersfs.com
     Input Text  ${SellerPhoneNumber}  %{SELLMOBILE}
     Input Password  ${SellerPW}   %{SELLPW}
     Input Password  ${SellerPWConfirm}  %{SELLPWCONFIRM}
-    Input Text  ${SellerCoName}   %{SELLCONAME}
+    Input Text  ${SellerCoName}   ${SellerStoreRandom}TestStoreSFS
     Input Text  ${ContactNumber}   %{SELLCONTACTN}
     Input Text  ${TradeBrandName}   %{SELLTRADEB}
     Click Element  ${CompanyTypeDrop}
