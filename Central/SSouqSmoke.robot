@@ -22,8 +22,6 @@ Resource   ${EXECDIR}/Central/Variables.robot
 Navigate_To_Page
     [Tags]  Go to Seafood Souq url
     [Documentation]
-#    [Arguments]  ${SFSURL}
-#    ${sfstesturl}=  Set Variable  ${SFSURL}
     Log To Console  Navigating to Seafood Souq
     go to   %{SFSURL}
     Sleep  10
@@ -34,9 +32,6 @@ Navigate_To_Page
 Existing User Login
     [Tags]  Log In Up
     [Documentation]
-#    [Arguments]  ${EXISTINGU}  ${EXISTINGP}
-#    ${existinguser}=  Set Variable  ${EXISTINGU}
-#    ${existingpw}=  Set Variable  ${EXISTINGP}
     Log To Console  Log into Seafood Souq
     Set Window Size  1366   800
     Wait Until Element is Visible   ${Login}
@@ -52,17 +47,6 @@ Existing User Login
 Shop
     [Tags]  Shop
     [Documentation]
-#    [Arguments]  ${PAYNAMEF}  ${PAYNAMEL}  ${PAYCONAME}  ${PAYADDY}  ${PAYCITY}  ${PAYCOUNTRY}  ${PAYCCNAME}  ${PAYCCNUM}  ${PAYCCCVN}  ${PAYADDNOTE}
-#    ${paymentnamef}=  Set Variable    ${PAYNAMEF}
-#    ${paymentnamel}=  Set Variable    ${PAYNAMEL}
-#    ${paymentco}=  Set Variable    ${PAYCONAME}
-#    ${paymentad}=  Set Variable    ${PAYADDY}
-#    ${paymentcty}=  Set Variable    ${PAYCITY}
-#    ${paymentctry}=  Set Variable   ${PAYCOUNTRY}
-#    ${paymentccname}=  Set Variable  ${PAYCCNAME}
-#    ${paymentccnumber}=  Set Variable  ${PAYCCNUM}
-#    ${paymentcccvn}=  Set Variable   ${PAYCCCVN}
-#    ${paymentaddnote}=  Set Variable  ${PAYADDNOTE}
     Log to Console  Shop workflow
     Sleep  5
     # Wait Until Element is not Visible  ${WaveLoader}
@@ -128,17 +112,6 @@ Shop
 Buyer Registration
     [Tags]  Buyer Registration
     [Documentation]
-#    [Arguments]  ${BUYFIRST}  ${BUYLAST}  ${BUYEMAIL}   ${BUYMOBILE}  ${BUYPW}  ${BUYPWVERIFY}   ${BUYCONAME}   ${BUYBUSTYPE}   ${BUYADDY}   ${BUYTRN}
-#    ${buyerfirstn}=  Set Variable  ${BUYFIRST}
-#    ${buyerlastn}=  Set Variable  ${BUYLAST}
-#    ${buyeremailentry}=  Set Variable  ${BUYEMAIL}
-#    ${buyerphoneentry}=  Set Variable  ${BUYMOBILE}
-#    ${buyerpwentry}=   Set Variable   ${BUYPW}
-#    ${buyerpwverifyentry}=   Set Variable   ${BUYPWVERIFY}
-#    ${buyerconameentry}=   Set Variable   ${BUYCONAME}
-#    ${buyerbustype}=    Set Variable   ${BUYBUSTYPE}
-#    ${buyeraddressentry}=    Set Variable   ${BUYADDY}
-#    ${buyertrnentry}=    Set Variable   ${BUYTRN}
     ${BuyerEmailRandom}=  Generate Random String  8
     Set Window Size  1366   800
     Click Element  ${RegisterHeaderBtn}
@@ -170,23 +143,6 @@ Buyer Registration
 Seller Registration
     [Tags]  Seller Registration
     [Documentation]
-#    [Arguments]  ${SELLFIRST}  ${SELLLAST}  ${SELLEMAIL}  ${SELLMOBILE}  ${SELLPW}  ${SELLPWCONFIRM}  ${SELLCONAME}  ${SELLCONTACTN}  ${SELLTRADEB}  ${SELLCTY}  ${SELLADDY}  ${SELLPRODUCTS}  ${SELLLICN}  ${SELLSFT}  ${SELLCBKNUM}  ${SELLSWCODE}
-#    ${sellerfirstn}=  Set Variable  ${SELLFIRST}
-#    ${sellerlastn}=  Set Variable  ${SELLLAST}
-#    ${selleremailentry}=  Set Variable  ${SELLEMAIL}
-#    ${sellerphone}=  Set Variable  ${SELLMOBILE}
-#    ${sellerpwentry}=  Set Variable  ${SELLPW}
-#    ${sellerpwconvirmentry}=  Set Variable  ${SELLPWCONFIRM}
-#    ${sellerconameentry}=  Set Variable  ${SELLCONAME}
-#    ${sellercontactnum}=  Set Variable  ${SELLCONTACTN}
-#    ${sellertradebrand}=  Set Variable  ${SELLTRADEB}
-#    ${sellercityentry}=  Set Variable  ${SELLCTY}
-#    ${selleraddressentry}=  Set Variable  ${SELLADDY}
-#    ${sellerproductsentry}=  Set Variable   ${SELLPRODUCTS}
-#    ${sellerlicense}=  Set Variable   ${SELLLICN}
-#    ${sellersafteynum}=  Set Variable  ${SELLSFT}
-#    ${sellerbanknumber}=  Set Variable  ${SELLCBKNUM}
-#    ${sellerswiftcode}=  Set Variable  ${SELLSWCODE}
     ${SellerEmailRandom}=  Generate Random String  8
     ${SellerStoreRandom}=  Generate Random String  4
     Set Window Size  1366   800
@@ -231,14 +187,6 @@ Seller Registration
 Add Product
     [Tags]  Addition of Product
     [Documentation]
-#    [Arguments]   ${PRODNAME}  ${BRANDNAME}  ${PRODSKU}  ${HSCODE}  ${MAXORDER}  ${MINORDER}  ${SPOIL}
-#    ${pa_name}=    Set Variable  ${PRODNAME}
-#    ${pa_brand}=  Set Variable  ${BRANDNAME}
-#    ${pa_sku}=  Set Variable  ${PRODSKU}
-#    ${pa_hscode}=  Set Variable  ${HSCODE}
-#    ${pa_max_o}=  Set Variable  ${MAXORDER}
-#    ${pa_min_o}=  Set Variable  ${MINORDER}
-#    ${pa_spoil}=  Set Variable  ${SPOIL}
     Set Window Size  1366   800
     Click Element  ${AddNewButton}
     Wait Until Element is Visible  ${AddNewProductHeader}
@@ -305,4 +253,5 @@ Add Product
     Click Element   ${SubmitButton}
     Sleep  8
     Capture Page Screenshot
+
 

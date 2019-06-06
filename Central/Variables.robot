@@ -190,5 +190,3 @@ ${ImageOne}   /Users/ronharley/AutomatedTests/SSouq/UploadImages/SFSLogo.png
 ${ImageOneUpload}   //div[@class='col-3 img-select']//img
 ${PriceField}  //input[@ng-reflect-name='0']
 
-
-
