@@ -39,11 +39,11 @@ Existing User Login
     Set Window Size  1366   800
     Wait Until Element is Visible   ${Login}
     Click Element  ${Login}
-    Wait Until Element is Visible  ${WelcomeBack}
+    Wait Until Element is Visible  ${WelcomeBack}  10
     Input Text  ${EmailField}   ${existinguser}
     Input Password  ${PasswordField}   ${existingpw}
     Click Element  ${LoginBtn}
-    Wait Until Element is Visible  ${HeadShotLogo}
+#    Wait Until Element is Visible  ${HeadShotLogo}
 
 
 Shop
@@ -226,12 +226,14 @@ Add Product
     ${pa_min_o}=  Set Variable  ${MINORDER}
     ${pa_spoil}=  Set Variable  ${SPOIL}
     Set Window Size  1366   800
+    Wait Until Element is Visible  ${AddNewButton}  10
     Click Element  ${AddNewButton}
     Wait Until Element is Visible  ${AddNewProductHeader}
     Log to Console  Enter Product Type
     Input Text  ${ProductNameField}  ${pa_name}
     Input Text  ${BrandNameField}  ${pa_brand}
     Click Element  ${SeaLifeCatDrop}
+    Sleep  1
     Click Element  ${SeaLifeCatSelection}
     Sleep  1
     Click Element  ${SeaLifeCatDrop}
@@ -278,7 +280,8 @@ Add Product
     Click Element  ${PortLoadingSelection}
     Click Element  ${CoHsCodeLookup}
     Log to Console  Enter Product Pricing
-    Scroll Element Into View  ${SubmitButton}
+    #Scroll Element Into View  ${SubmitButton}
+    Scroll Element Into View   ${PrepHeadOnGut}
     Click Element  ${UnitOfSaleDrop}
     Click Element  ${UnitOfSaleSelectionKg}
     Input Text      ${MinOrderField}  ${pa_min_o}
@@ -289,4 +292,5 @@ Add Product
     Click Element   ${SubmitButton}
     Sleep  8
     Capture Page Screenshot
+
 

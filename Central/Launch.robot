@@ -17,36 +17,36 @@ ${BROWSER}   chrome
 
 *** Test Cases ***
 
-Navigate to Page
-    Log To Console  Navigating to Seafood Souq
-    SSouqSmoke.Navigate to Page   https://dev.seafoodsouq.com
-
-
-Existing User Signin
-    Log To Console  Log in
-    SSouqSmoke.Navigate to Page  https://dev.seafoodsouq.com
-    SSouqSmoke.Existing User Login
-
-
-Shop Workflow
-    Log To Console  Buyer Purchase
-    SSouqSmoke.Navigate to Page
-    SSouqSmoke.Existing User Login
-    SSouqSmoke.Shop
-
-
-Buyer Registration
-    Log To Console  Buy
-    SSouqSmoke.Navigate to Page   https://qa.seafoodsouq.com
-    SSouqSmoke.Buyer Registration
-
-Seller Registration
-    Log To Console  Sell
-    SSouqSmoke.Navigate to Page  https://dev.seafoodsouq.com
-    SSouqSmoke.Seller Registration
+#Navigate to Page
+#    Log To Console  Navigating to Seafood Souq
+#    SSouqSmoke.Navigate to Page   https://dev.seafoodsouq.com
+#
+#
+#Existing User Signin
+#    Log To Console  Log in
+#    SSouqSmoke.Navigate to Page  https://dev.seafoodsouq.com
+#    SSouqSmoke.Existing User Login
+#
+#
+#Shop Workflow
+#    Log To Console  Buyer Purchase
+#    SSouqSmoke.Navigate to Page
+#    SSouqSmoke.Existing User Login
+#    SSouqSmoke.Shop
+#
+#
+#Buyer Registration
+#    Log To Console  Buy
+#    SSouqSmoke.Navigate to Page   https://qa.seafoodsouq.com
+#    SSouqSmoke.Buyer Registration
+#
+#Seller Registration
+#    Log To Console  Sell
+#    SSouqSmoke.Navigate to Page  https://dev.seafoodsouq.com
+#    SSouqSmoke.Seller Registration
 
 Add Product
     Log To Console  Add Product
     SSouqSmoke.Navigate to Page  https://qa.seafoodsouq.com
-    SSouqSmoke.Existing User Login
-    SSouqSmoke.Add Product
+    SSouqSmoke.Existing User Login   Seller6/1@seafoodsouq.com   Test1234
+    SSouqSmoke.Add Product  Test  Test  1234  4321  5  10  3
