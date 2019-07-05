@@ -45,8 +45,20 @@ ${BROWSER}   chrome
 #    SSouqSmoke.Navigate to Page  https://dev.seafoodsouq.com
 #    SSouqSmoke.Seller Registration
 
-Add Product
-    Log To Console  Add Product
+Add Whole Fish
+    Log To Console  Add Whole Fish
     SSouqSmoke.Navigate to Page  https://qa.seafoodsouq.com
     SSouqSmoke.Existing User Login   Seller6/1@seafoodsouq.com   Test1234
-    SSouqSmoke.Add Product  Test  Test  1234  4321  5  10  3
+    SSouqSmoke.Add Fish Whole   Salmon  Whole  1234  4321  5  10  3
+
+Add Whole Fish Boxes
+    Log To Console  Add Whole Fish Boxes
+    SSouqSmoke.Navigate to Page  https://qa.seafoodsouq.com
+    SSouqSmoke.Existing User Login   Seller6/1@seafoodsouq.com   Test1234
+    SSouqSmoke.Add Fish Boxes  Salmon  Boxes  1234  4321  5  10  3
+
+Add Fish Fillet
+    Log To Console  Add Fish Fillet
+    SSouqSmoke.Navigate to Page  https://qa.seafoodsouq.com
+    SSouqSmoke.Existing User Login   Seller6/1@seafoodsouq.com   Test1234
+    SSouqSmoke.Add Fish Fillet  Salmon  Fillet  1234  4321  5  10  3

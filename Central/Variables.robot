@@ -31,8 +31,9 @@ ${CountryScotland}  //label[contains(.,'Scotland')]
 ${CountryTimorLeste}  //label[contains(.,'Timor-Leste')]
 ${PrepHeadOnGut}  //label[contains(.,'Head On Gutted')]
 ${PrepHeadOffGut}  //label[contains(.,'Head Off Gutted')]
+${PrepFillet}    //span[@class='selectionable select'][contains(.,'Fillet')]
 ${PrepFilleted}  //label[contains(.,'Filleted')]
-${PrepTrimA}  //label[contains(.,'Trim A')]
+${PrepTrimA}  //span[@class='selectionable'][contains(text(),'Trim A')]
 ${PrepTrimB}  //label[contains(.,'Trim B')]
 ${PrepTrimC}  //label[contains(.,'Trim C')]
 ${PrepTrimD}  //label[contains(.,'Trim D')]
@@ -186,6 +187,16 @@ ${ProductPriceHeader}  //span[contains(.,'pricing')]
 ${UploadImageScrollTo}  //label[@for='file'][contains(.,'Upload Gallery Images...*')]
 ${AddNewProductHeader}  //span[contains(.,'Add new product')]
 ${UploadProductImage}   //input[@id='file']
-${ImageOne}   /Users/ronharley/AutomatedTests/SSouq/UploadImages/SFSLogo.png
+${FishImage1}    /Users/ronharley/AutomatedTests/SSouq/UploadImages/SFSLogo.png
+${FishBoxImage2}   /Users/ronharley/AutomatedTests/SSouq/UploadImages/FishinBox.jpeg
+${FishFilletImage3}  /Users/ronharley/AutomatedTests/SSouq/UploadImages/Salmonfillet.jpeg
 ${ImageOneUpload}   //div[@class='col-3 img-select']//img
 ${PriceField}  //input[@ng-reflect-name='0']
+${BoxesCheckbox}  //label[contains(.,'Enable if you would like to sell you product in boxes.')]
+${FilletFishLink}  //span[contains(.,'FILLETED FISH')]
+${FilletTrimACheck}  //span[@class='selectionable'][contains(.,'Trim A')]
+${FilletTrimBCheck}  //span[@class='selectionable'][contains(.,'Trim B')]
+${FilletTrimBTab}  //div[@class='selectionable']//span[contains(text(),'Trim B')]
+${FilletPriceField}  //div[@class='col-4 ng-untouched ng-pristine ng-invalid']//input[@placeholder='Price']
+${DomesticFishCheck}  //label[contains(.,'Domestic Fish')]
+${ComingSoonCheck}  //label[contains(.,'Coming Soon')]

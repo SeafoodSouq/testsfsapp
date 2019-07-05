@@ -214,10 +214,11 @@ Seller Registration
 
 
 
-Add Product
+Add Fish Whole
     [Tags]  Addition of Product
     [Documentation]
     [Arguments]   ${PRODNAME}  ${BRANDNAME}  ${PRODSKU}  ${HSCODE}  ${MAXORDER}  ${MINORDER}  ${SPOIL}
+    ${FishProductRandom}=  Generate Random String  8
     ${pa_name}=    Set Variable  ${PRODNAME}
     ${pa_brand}=  Set Variable  ${BRANDNAME}
     ${pa_sku}=  Set Variable  ${PRODSKU}
@@ -228,7 +229,7 @@ Add Product
     Set Window Size  1366   800
     Wait Until Element is Visible  ${AddNewButton}  10
     Click Element  ${AddNewButton}
-    Wait Until Element is Visible  ${AddNewProductHeader}
+    Wait Until Element is Visible  ${AddNewProductHeader}  5
     Log to Console  Enter Product Type
     Input Text  ${ProductNameField}  ${pa_name}
     Input Text  ${BrandNameField}  ${pa_brand}
@@ -260,7 +261,7 @@ Add Product
     Click Element  ${UploadImage}
     Capture Page Screenshot
     Sleep  4
-    Choose File     ${UploadProductImage}   ${ImageOne}
+    Choose File     ${UploadProductImage}   ${FishImage1}
     Sleep  3
     Capture Page Screenshot
     Wait Until Element Is Visible  ${ImageOneUpload}
@@ -294,3 +295,171 @@ Add Product
     Capture Page Screenshot
 
 
+Add Fish Boxes
+    [Tags]  Addition of Product
+    [Documentation]
+    [Arguments]   ${PRODNAME}  ${BRANDNAME}  ${PRODSKU}  ${HSCODE}  ${MAXORDER}  ${MINORDER}  ${SPOIL}
+    ${FishProductRandom}=  Generate Random String  8
+    ${pa_name}=    Set Variable  ${PRODNAME}
+    ${pa_brand}=  Set Variable  ${BRANDNAME}
+    ${pa_sku}=  Set Variable  ${PRODSKU}
+    ${pa_hscode}=  Set Variable  ${HSCODE}
+    ${pa_max_o}=  Set Variable  ${MAXORDER}
+    ${pa_min_o}=  Set Variable  ${MINORDER}
+    ${pa_spoil}=  Set Variable  ${SPOIL}
+    Set Window Size  1366   800
+    Wait Until Element is Visible  ${AddNewButton}  10
+    Click Element  ${AddNewButton}
+    Wait Until Element is Visible  ${AddNewProductHeader}  5
+    Log to Console  Enter Product Type
+    Input Text  ${ProductNameField}  ${pa_name}
+    Input Text  ${BrandNameField}  ${pa_brand}
+    Click Element  ${SeaLifeCatDrop}
+    Sleep  1
+    Click Element  ${SeaLifeCatSelection}
+    Sleep  1
+    Click Element  ${SeaLifeCatDrop}
+    Click Element  ${SeaLifeCatSelection}
+    Sleep  1
+    Click Element  ${SeaLifeSpeciesDrop}
+    Sleep  1
+    Click Element  ${SeaLifeSpeciesSelection}
+    Sleep  1
+    Click Element  ${SeaLifeSubSpeciesDrop}
+    Sleep  1
+    Click Element  ${SeaLifeSubSpeciesSelection}
+    Sleep  1
+    Click Element  ${SeaLifeSubSpeciesVarDrop}
+    Sleep  1
+    Click Element  ${SeaLifeSubSpeciesVarSelection}
+    Log to Console  Enter Product Features
+    Click Element   ${RaisedDrop}
+    Click Element   ${RaisedSelection}
+    Click Element   ${TreatmentDrop}
+    Click Element   ${TreatmentSelection}
+    Log to Console  Add Product Images
+    Scroll Element Into View   ${ProductDetailsHeader}
+    Click Element  ${UploadImage}
+    Capture Page Screenshot
+    Sleep  4
+    Choose File     ${UploadProductImage}   ${FishBoxImage2}
+    Sleep  3
+    Capture Page Screenshot
+    Wait Until Element Is Visible  ${ImageOneUpload}
+    Sleep  2
+    Log to Console  Enter Product Details
+    Scroll Element Into View   ${ProductPriceHeader}
+#    Click Element   ${CoProdSKUField}
+#    Input Text      ${CoProdSKUField}   ${pa_sku}
+#    Input Text      ${CoHsCodeField}  ${pa_hscode}
+    Click Element  ${CountryOriginDrop}
+    Sleep  2
+    Capture Page Screenshot
+    Click Element  ${CountryOriginSelection}
+    Click Element  ${ProcessingCountryDrop}
+    Click Element  ${ProcessingCountrySelection}
+    Click Element  ${PortLoadingDrop}
+    Click Element  ${PortLoadingSelection}
+    Click Element  ${CoHsCodeLookup}
+    Log to Console  Enter Product Pricing
+    Scroll Element Into View   ${PrepHeadOnGut}
+    Click Element  ${BoxesCheckbox}
+    Click Element  ${UnitOfSaleDrop}
+    Click Element  ${UnitOfSaleSelectionKg}
+#    Input Text      ${MinOrderField}  ${pa_min_o}
+    Input Text      ${MaxOrderField}  ${pa_max_o}
+    Click Element   ${AdvancedPriceCheckbox}
+    Input Text   ${PriceField}  10
+    Sleep  2
+    Click Element   ${SubmitButton}
+    Sleep  8
+    Capture Page Screenshot
+
+
+Add Fish Fillet
+    [Tags]  Addition of Product
+    [Documentation]
+    [Arguments]   ${PRODNAME}  ${BRANDNAME}  ${PRODSKU}  ${HSCODE}  ${MAXORDER}  ${MINORDER}  ${SPOIL}
+    ${FishProductRandom}=  Generate Random String  8
+    ${pa_name}=    Set Variable  ${PRODNAME}
+    ${pa_brand}=  Set Variable  ${BRANDNAME}
+    ${pa_sku}=  Set Variable  ${PRODSKU}
+    ${pa_hscode}=  Set Variable  ${HSCODE}
+    ${pa_max_o}=  Set Variable  ${MAXORDER}
+    ${pa_min_o}=  Set Variable  ${MINORDER}
+    ${pa_spoil}=  Set Variable  ${SPOIL}
+    Set Window Size  1366   800
+    Wait Until Element is Visible  ${AddNewButton}  10
+    Click Element  ${AddNewButton}
+    Wait Until Element is Visible  ${AddNewProductHeader}  5
+    Log to Console  Enter Product Type
+    Input Text  ${ProductNameField}  ${pa_name}
+    Input Text  ${BrandNameField}  ${pa_brand}
+    Click Element  ${SeaLifeCatDrop}
+    Sleep  1
+    Click Element  ${SeaLifeCatSelection}
+    Sleep  1
+    Click Element  ${SeaLifeCatDrop}
+    Click Element  ${SeaLifeCatSelection}
+    Sleep  1
+    Click Element  ${SeaLifeSpeciesDrop}
+    Sleep  1
+    Click Element  ${SeaLifeSpeciesSelection}
+    Sleep  1
+    Click Element  ${SeaLifeSubSpeciesDrop}
+    Sleep  1
+    Click Element  ${SeaLifeSubSpeciesSelection}
+    Sleep  1
+    Click Element  ${SeaLifeSubSpeciesVarDrop}
+    Sleep  1
+    Click Element  ${SeaLifeSubSpeciesVarSelection}
+    Log to Console  Enter Product Features
+    Click Element   ${FilletFishLink}
+    Click Element   ${RaisedDrop}
+    Click Element   ${RaisedSelection}
+    Click Element   ${TreatmentDrop}
+    Click Element   ${TreatmentSelection}
+    Log to Console  Add Product Images
+    Scroll Element Into View   ${ProductDetailsHeader}
+    Click Element  ${UploadImage}
+    Capture Page Screenshot
+    Sleep  4
+    Choose File     ${UploadProductImage}   ${FishFilletImage3}
+    Sleep  3
+    Capture Page Screenshot
+    Wait Until Element Is Visible  ${ImageOneUpload}
+    Sleep  2
+    Log to Console  Enter Product Details
+    Scroll Element Into View   ${ProductPriceHeader}
+#    Click Element   ${CoProdSKUField}
+#    Input Text      ${CoProdSKUField}   ${pa_sku}
+#    Input Text      ${CoHsCodeField}  ${pa_hscode}
+    Click Element  ${CountryOriginDrop}
+    Sleep  2
+    Capture Page Screenshot
+    Click Element  ${CountryOriginSelection}
+    Click Element  ${ProcessingCountryDrop}
+    Click Element  ${ProcessingCountrySelection}
+    Click Element  ${PortLoadingDrop}
+    Click Element  ${PortLoadingSelection}
+    Click Element  ${CoHsCodeLookup}
+    Log to Console  Enter Product Pricing
+    #Scroll Element Into View  ${SubmitButton}
+    Scroll Element Into View   ${PrepTrimA}
+    Click Element  ${UnitOfSaleDrop}
+    Click Element  ${UnitOfSaleSelectionKg}
+    Input Text      ${MinOrderField}  ${pa_min_o}
+    Input Text      ${MaxOrderField}  ${pa_max_o}
+    Click Element   ${PrepTrimA}
+    Sleep  2
+    Click Element  ${FilletTrimBCheck}
+    Sleep  2
+    Input Text   ${FilletPriceField}  10
+    Sleep  2
+    Click Element  ${FilletTrimBTab}
+    Sleep  2
+    Input Text   ${FilletPriceField}  10
+    Sleep  2
+    Click Element   ${SubmitButton}
+    Sleep  5
+    Capture Page Screenshot
